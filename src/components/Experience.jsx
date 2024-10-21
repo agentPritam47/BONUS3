@@ -15,6 +15,7 @@ const Experience = ({ hovered, setHoverred,pos }) => {
           rotation-y={-Math.PI / 2}
           hovered={hovered}
           setHoverred={setHoverred}
+          pos = {pos}
         />
       </group>
       {/* <Model1 position-y={-1} /> */}

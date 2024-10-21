@@ -12,19 +12,25 @@ import * as THREE from "three"
 import { useGSAP } from '@gsap/react'
 import gsap, { Expo } from 'gsap'
 import { useFrame, useThree } from '@react-three/fiber'
-export function Model({setHoverred, hovered,...props}) {
+export function Model({setHoverred, hovered,pos,...props}) {
   const { nodes, materials } = useGLTF('/bugati_divo.glb')
-  // const [hovered, setHovered] = useState(false)
   const car = useRef()
   const {camera} = useThree()
-  // const viewport = useThree((state)=>state.viewport)
   const carscale = Math.max(window.innerWidth / 15300, .04)
-  // Animate the camera when the hovered state changes
+  let roty = 0
+  let rotx = 0
+  if (pos==-1){
+    roty = 6
+    rotx = -5.6
+  } else{
+    roty = 1
+    rotx = -3.6
+  }
   useEffect(() => {
     if (hovered) {
       gsap.to(camera.position, {
-        x: -5.6,
-        y: 6,
+        x: rotx,
+        y: roty,
         z: 0,
         delay: .3,
         duration: 2,
