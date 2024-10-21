@@ -89,7 +89,7 @@ const App = () => {
           <div className=" h-5 w-5 rounded-full border-[1px] border-zinc-700 "></div>
         </div>
 
-        <div ref={colplate} className="absolute opacity-0  sm:h-fit sm:w-[17vw] w-[50%] h-fit left-1/2 -translate-x-1/2 sm:left-[10%] top-[20%] rounded-lg flex flex-col items-center justify-start sm:justify-between bg-zinc-100 sm:top-1/2 -translate-y-1/2 p-5">
+        <div ref={colplate} className="absolute opacity-0  sm:h-fit sm:w-[17vw] w-[50%] h-fit left-1/2 -translate-x-1/2 sm:left-[10%] top-[15%] rounded-lg flex flex-col items-center justify-start sm:justify-between bg-zinc-100 sm:top-1/2 -translate-y-1/2 p-5">
           <h1 className=" font-[reg] font-bold text-center pb-5">
             CHOOSE YOUR PRESET
           </h1>
