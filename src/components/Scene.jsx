@@ -34,8 +34,8 @@ const Scene = ({hovered, setHoverred}) => {
         {/* <Stage adjustCamera={false} /> */}
         <Environment files={"https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_08_1k.hdr"} environmentIntensity={1} />
         {/* <Environment preset='city' /> */}
-        <ContactShadows scale={40} position-y={-1.2} opacity={.5} blur={2} />
-        <ContactShadows scale={10} position-y={-1} opacity={.8} blur={1.5} />
+        <ContactShadows scale={40} position-y={pos-.2} opacity={.5} blur={2} />
+        <ContactShadows scale={10} position-y={pos} opacity={.8} blur={1.5} />
         {/* <AccumulativeShadows position={[0, pos, 0]} frames={50} alphaTest={.7} scale={15}>
           <RandomizedLight amount={9} radius={15} ambient={.8} position={[1, 5, -1]} />
         </AccumulativeShadows> */}
