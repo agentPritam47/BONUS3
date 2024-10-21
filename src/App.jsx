@@ -5,15 +5,15 @@ import gsap, { Expo } from "gsap";
 
 const App = () => {
   const colors = [
-    { col: "red" },
-    { col: "blue" },
-    { col: "green" },
-    { col: "yellow" },
-    { col: "cyan" },
+    { col: "#D50032" },
+    { col: "#FF6A13" },
     { col: "#a26c39" },
+    { col: "#F6EB61" },
+    { col: "#1C3F8E" },
+    { col: "cyan" },
     { col: "black" },
     { col: "white" },
-    { col: "gray" },
+    { col: "#C0C0C0" },
   ];
   const [hovered, setHoverred] = useState(false);
   const [color, setColor] = useState("cyan")
@@ -89,14 +89,14 @@ const App = () => {
           <div className=" h-5 w-5 rounded-full border-[1px] border-zinc-700 "></div>
         </div>
 
-        <div ref={colplate} className="absolute opacity-0  sm:h-fit sm:w-[17vw] w-[50%] h-fit left-1/2 -translate-x-1/2 sm:left-[10%] top-[15%] rounded-lg flex flex-col items-center justify-start sm:justify-between bg-zinc-100 sm:top-1/2 -translate-y-1/2 p-5">
+        <div ref={colplate} className=" shadow-inner absolute opacity-0  sm:h-fit sm:w-[17vw] w-[50%] h-fit left-1/2 -translate-x-1/2 sm:left-[10%] top-[15%] rounded-lg flex flex-col items-center justify-start sm:justify-between bg-zinc-100 sm:top-1/2 -translate-y-1/2 p-5">
           <h1 className=" font-[reg] font-bold text-center pb-5">
             CHOOSE YOUR PRESET
           </h1>
           <div className="w-full h-fit flex flex-wrap items-center justify-center gap-3">
             {colors.map((item, index) => {
               return (
-                <div onClick={()=>setColor(item.col)} key={index} className=" pointer-events-auto cursor-pointer sm:min-h-[2vw] sm:min-w-[4vw] h-[3vh] w-[5vh] rounded-tl-xl rounded-br-xl border-[3px] hover:border-white" style={{backgroundColor: item.col}}></div>
+                <div onClick={()=>setColor(item.col)} key={index} className=" shadow-2xl pointer-events-auto cursor-pointer sm:min-h-[2vw] sm:min-w-[4vw] h-[3vh] w-[5vh] rounded-tl-xl rounded-br-xl border-[3px] hover:border-white" style={{backgroundColor: item.col}}></div>
               );
             })}
           </div>
