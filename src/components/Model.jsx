@@ -12,7 +12,9 @@ import * as THREE from "three"
 import { useGSAP } from '@gsap/react'
 import gsap, { Expo } from 'gsap'
 import { useFrame, useThree } from '@react-three/fiber'
-export function Model({setHoverred, hovered,pos,...props}) {
+
+
+export function Model({setHoverred, hovered,pos,color,...props}) {
   const { nodes, materials } = useGLTF('/bugati_divo.glb')
   const car = useRef()
   const {camera} = useThree()
@@ -193,6 +195,7 @@ export function Model({setHoverred, hovered,pos,...props}) {
         position={[-0.003, 1.646, 0.16]}
         rotation={[Math.PI / 2, 0, 0]}
         scale={[-10.151, 10.151, 10.151]}
+        material-color={color}
       />
       <mesh
         castShadow
@@ -212,7 +215,7 @@ export function Model({setHoverred, hovered,pos,...props}) {
         rotation={[Math.PI / 2, 0, 0]}
         scale={[-10.151, 10.151, 10.151]}
         >
-            <meshStandardMaterial color={"#00f7ff"}  roughness={0.3} side={THREE.DoubleSide}  />
+            <meshStandardMaterial color={color}  roughness={0.3} side={THREE.DoubleSide}  />
         </mesh>
       <mesh
         castShadow

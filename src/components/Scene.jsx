@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Experience from './Experience'
 import { AccumulativeShadows, ContactShadows, Environment, OrbitControls, RandomizedLight, Stage } from '@react-three/drei'
 
-const Scene = ({hovered, setHoverred}) => {
+const Scene = ({hovered, setHoverred,color}) => {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
   const [pos, setPos] = useState(-1);
@@ -30,7 +30,7 @@ const Scene = ({hovered, setHoverred}) => {
   return (
     <Canvas flat camera={{position:[0,1.5,6.5], fov:35}} shadows>
         <color attach={"background"} args={["#FDFDFD"]} />
-        <Experience hovered={hovered} setHoverred={setHoverred} pos={pos} />
+        <Experience hovered={hovered} setHoverred={setHoverred} pos={pos} color={color} />
         {/* <Stage adjustCamera={false} /> */}
         <Environment files={"https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_08_1k.hdr"} environmentIntensity={1} />
         {/* <Environment preset='city' /> */}

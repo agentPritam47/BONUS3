@@ -3,19 +3,19 @@ import { Model } from "./Model";
 import { Model1 } from "./Model1";
 import { Billboard, Html, Text } from "@react-three/drei";
 
-const Experience = ({ hovered, setHoverred,pos }) => {
+const Experience = ({ hovered, setHoverred,pos,color }) => {
   
 
   return (
     <>
       <group>
         <Model
-          // scale={0.1}
           position-y={pos}
           rotation-y={-Math.PI / 2}
           hovered={hovered}
           setHoverred={setHoverred}
           pos = {pos}
+          color = {color}
         />
       </group>
       {/* <Model1 position-y={-1} /> */}
