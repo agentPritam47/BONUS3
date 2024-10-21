@@ -15,7 +15,7 @@ const Scene = ({hovered, setHoverred}) => {
         <AccumulativeShadows position={[0, -1, 0]} frames={70} alphaTest={.7} scale={15}>
           <RandomizedLight amount={10} radius={15} ambient={.8} position={[1, 5, -1]} />
         </AccumulativeShadows>
-        <OrbitControls maxPolarAngle={Math.PI/2.3} />
+        <OrbitControls maxPolarAngle={Math.PI/2.3} minPolarAngle={Math.PI/3} />
     </Canvas>
   )
 }
