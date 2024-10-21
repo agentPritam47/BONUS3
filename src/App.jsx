@@ -5,7 +5,7 @@ import gsap, { Expo } from "gsap";
 
 const App = () => {
   const [hovered, setHoverred] = useState(false);
-  console.log(hovered);
+  // console.log(hovered);
   const text= useRef()
 
   useEffect(()=>{
