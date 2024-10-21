@@ -35,9 +35,9 @@ const Scene = ({hovered, setHoverred}) => {
         <Environment files={"https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_08_1k.hdr"} environmentIntensity={1} />
         {/* <Environment preset='city' /> */}
         {/* <ContactShadows position-y={-1} opacity={.5} blur={2} /> */}
-        <AccumulativeShadows position={[0, pos, 0]} frames={70} alphaTest={.7} scale={15}>
+        {/* <AccumulativeShadows position={[0, pos, 0]} frames={70} alphaTest={.7} scale={15}>
           <RandomizedLight amount={10} radius={15} ambient={.8} position={[1, 5, -1]} />
-        </AccumulativeShadows>
+        </AccumulativeShadows> */}
         <OrbitControls maxPolarAngle={Math.PI/2.3} minPolarAngle={Math.PI/3} />
     </Canvas>
   )
