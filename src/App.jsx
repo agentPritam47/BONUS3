@@ -89,14 +89,14 @@ const App = () => {
           <div className=" h-5 w-5 rounded-full border-[1px] border-zinc-700 "></div>
         </div>
 
-        <div ref={colplate} className=" shadow-inner absolute opacity-0  sm:h-fit sm:w-[17vw] w-[50%] h-fit left-1/2 -translate-x-1/2 sm:left-[10%] top-[15%] rounded-lg flex flex-col items-center justify-start sm:justify-between bg-zinc-100 sm:top-1/2 -translate-y-1/2 p-5">
+        <div ref={colplate} className=" shadow-inner shadow-zinc-300 absolute opacity-0  sm:h-fit sm:w-[17vw] w-[50%] h-fit left-1/2 -translate-x-1/2 sm:left-[10%] top-[15%] rounded-lg flex flex-col items-center justify-start sm:justify-between bg-zinc-50 sm:top-1/2 -translate-y-1/2 p-5">
           <h1 className=" font-[reg] font-bold text-center pb-5">
             CHOOSE YOUR PRESET
           </h1>
           <div className="w-full h-fit flex flex-wrap items-center justify-center gap-3">
             {colors.map((item, index) => {
               return (
-                <div onClick={()=>setColor(item.col)} key={index} className=" shadow-2xl pointer-events-auto cursor-pointer sm:min-h-[2vw] sm:min-w-[4vw] h-[3vh] w-[5vh] rounded-tl-xl rounded-br-xl border-[3px] hover:border-white" style={{backgroundColor: item.col}}></div>
+                <div onClick={()=>setColor(item.col)} key={index} className=" shadow-md shadow-zinc-400 pointer-events-auto cursor-pointer sm:min-h-[2vw] sm:min-w-[4vw] h-[3vh] w-[5vh] rounded-tl-xl rounded-br-xl transition-all duration-300 hover:border-[3px] hover:border-white" style={{backgroundColor: item.col}}></div>
               );
             })}
           </div>
